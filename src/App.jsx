@@ -6,12 +6,15 @@ import { Contact } from "./Pages/Contact";
 import { AppLayout } from "./components/layout/AppLayout";
 
 import './index.css'
+import { ErrorPage } from "./Pages/ErrorPage";
+import { NotFound } from "./Pages/NotFound";
 const App = () => {
 
     const router = createBrowserRouter([
       {
         path:"/",
         element:<AppLayout />,
+        errorElement : <ErrorPage />,
         children: [
           {
             path:"/",
@@ -29,6 +32,12 @@ const App = () => {
             path:"/contact",
             element:<Contact />
           },
+
+          // {
+          //   path:"*",
+          //   // element :<ErrorPage /> // global page
+          //   element : <NotFound />
+          // }
         ]
       },
      

@@ -1226,5 +1226,10 @@
       padding: 6.4rem 0rem 2.4rem 0rem;
     }
   }
+
+  .error-section {
+    display: flex;
+    flex-direction: column;
+  }
   
   /***** End  media queries Section *****/
