@@ -8,6 +8,7 @@ import { AppLayout } from "./components/layout/AppLayout";
 import './index.css'
 import { ErrorPage } from "./Pages/ErrorPage";
 import { NotFound } from "./Pages/NotFound";
+import { getMovieData } from "./api/GetAPIData";
 const App = () => {
 
     const router = createBrowserRouter([
@@ -26,7 +27,8 @@ const App = () => {
           },
           {
             path:"/movie",
-            element:<Movie />
+            element:<Movie />,
+            loader:getMovieData,
           },
           {
             path:"/contact",
