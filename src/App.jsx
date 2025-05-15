@@ -2,7 +2,7 @@ import { createBrowserRouter, createRoutesFromChildren, Route, RouterProvider } 
 import { Home } from "./Pages/Home";
 import { About } from "./Pages/About";
 import { Movie } from "./Pages/Movie";
-import { Contact } from "./Pages/Contact";
+import { Contact, ContactData } from "./Pages/Contact";
 import { AppLayout } from "./components/layout/AppLayout";
 
 import './index.css'
@@ -40,7 +40,8 @@ const App = () => {
           },
           {
             path:"/contact",
-            element:<Contact />
+            element:<Contact />,
+            action: ContactData,
           },
 
           // {
